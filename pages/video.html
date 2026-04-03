@@ -1,0 +1,128 @@
+<!--
+    Name: [Your Name]
+    ID: [Your ID]
+    Section: [Your Section]
+    Date: [Date]
+    
+    File: pages/video.html
+    Description: Video page for PawPerfect with placeholder for future video content.
+    Features: Professional placeholder section with instructions for embedding video.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video - PawPerfect Pet Care</title>
+    <link rel="stylesheet" href="../global/main.css">
+    <link rel="stylesheet" href="../global/print.css" media="print">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header>
+        <nav class="main-nav" id="mainNav">
+            <div class="nav-brand">
+                <h1 class="logo">PawPerfect</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="video.html" class="active">Video</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="services.html#shop" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <div class="page-header">
+        <h2>Our Video</h2>
+        <p>Watch our promotional video to learn more about PawPerfect and the services we offer.</p>
+    </div>
+
+    <!-- ==================== VIDEO PLACEHOLDER SECTION ==================== -->
+    <div class="section video-section" id="videoSection">
+        <h3>PawPerfect Promotional Video</h3>
+
+        <!-- Video Placeholder Frame -->
+        <div class="video-placeholder" id="videoPlaceholder">
+            <div class="video-frame">
+                <!--
+                    ============================================================
+                    VIDEO EMBED INSTRUCTIONS:
+                    ============================================================
+                    To add your video, replace the placeholder below with one of:
+                    
+                    OPTION 1 - Local MP4 file (place file in videos/ folder):
+                    <video controls width="100%">
+                        <source src="../videos/your-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    OPTION 2 - YouTube embed:
+                    <iframe width="100%" height="500" 
+                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    
+                    OPTION 3 - Direct hosted video URL:
+                    <video controls width="100%">
+                        <source src="https://your-hosting.com/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    ============================================================
+                -->
+
+                <!-- Disabled video element placeholder -->
+                <video controls width="100%" poster="" style="pointer-events: none; opacity: 0.5;">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="video-overlay">
+                    <div class="play-icon">&#9654;</div>
+                    <h4>Video Will Be Added Here</h4>
+                    <p>The promotional video for PawPerfect is currently being produced.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h6>PawPerfect</h6>
+                <p>Premium pet care services you can trust. Grooming, boarding, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h6>Contact</h6>
+                <address>
+                    123 Pet Avenue, Jeddah, SA<br>
+                    <a href="mailto:info@pawperfect.com">info@pawperfect.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PawPerfect Pet Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

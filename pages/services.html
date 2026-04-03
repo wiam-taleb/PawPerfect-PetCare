@@ -1,0 +1,322 @@
+<!--
+    Name: [Your Name]
+    ID: [Your ID]
+    Section: [Your Section]
+    Date: [Date]
+    
+    File: pages/services.html
+    Description: Services & Features page for PawPerfect.
+    Features: Smart Booking System UI, Mini Pet Shop with cart functionality.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - PawPerfect Pet Care</title>
+    <link rel="stylesheet" href="../global/main.css">
+    <link rel="stylesheet" href="../global/print.css" media="print">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header>
+        <nav class="main-nav" id="mainNav">
+            <div class="nav-brand">
+                <h1 class="logo">PawPerfect</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="#shop" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <div class="page-header">
+        <h2>Our Services</h2>
+        <p>Explore our professional pet care services and book your appointment today.</p>
+    </div>
+
+    <!-- ==================== SERVICES OVERVIEW ==================== -->
+    <div class="section" id="servicesOverview">
+        <h3>What We Offer</h3>
+        <div class="services-detail-grid">
+            <div class="service-detail-card">
+                <img src="../images/hero-grooming.jpg" alt="Full grooming service">
+                <h4>Full Grooming</h4>
+                <p>Complete grooming package including bath, haircut, blow-dry, ear cleaning, and nail trimming. Our certified groomers handle all breeds with care and expertise.</p>
+                <p class="price"><strong>Starting at SAR 150</strong></p>
+            </div>
+            <div class="service-detail-card">
+                <img src="../images/pets-happy.jpg" alt="Bath service for pets">
+                <h4>Bath &amp; Brush</h4>
+                <p>Refreshing bath with premium shampoo, thorough brushing, and blow-dry. Perfect for regular maintenance between full grooming sessions.</p>
+                <p class="price"><strong>Starting at SAR 80</strong></p>
+            </div>
+            <div class="service-detail-card">
+                <img src="../images/dog-cat-friends.jpg" alt="Nail trim service">
+                <h4>Nail Trim</h4>
+                <p>Quick and safe nail trimming service. Our experts ensure a stress-free experience for your pet with professional-grade tools.</p>
+                <p class="price"><strong>Starting at SAR 40</strong></p>
+            </div>
+            <div class="service-detail-card">
+                <img src="../images/pet-boarding.jpg" alt="Pet boarding facility">
+                <h4>Boarding</h4>
+                <p>Comfortable overnight boarding with spacious kennels, daily exercise, and personalized feeding schedules. Your pet's home away from home.</p>
+                <p class="price"><strong>Starting at SAR 120/night</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SMART BOOKING SYSTEM ==================== -->
+    <div class="section booking-section" id="booking">
+        <h3>Smart Booking System</h3>
+        <p>Book your pet's appointment in just a few simple steps. Select your service, pet type, preferred date and time, then confirm your booking.</p>
+
+        <div class="booking-container" id="bookingContainer">
+            <!-- Step 1: Select Service -->
+            <div class="booking-step active" id="step1">
+                <h4>Step 1: Select Service</h4>
+                <div class="booking-options" id="serviceOptions">
+                    <button class="booking-option" data-value="Grooming">
+                        <span class="option-icon">&#9986;</span>
+                        <span class="option-label">Grooming</span>
+                        <span class="option-price">SAR 150+</span>
+                    </button>
+                    <button class="booking-option" data-value="Bath">
+                        <span class="option-icon">&#128167;</span>
+                        <span class="option-label">Bath &amp; Brush</span>
+                        <span class="option-price">SAR 80+</span>
+                    </button>
+                    <button class="booking-option" data-value="Nail Trim">
+                        <span class="option-icon">&#9997;</span>
+                        <span class="option-label">Nail Trim</span>
+                        <span class="option-price">SAR 40+</span>
+                    </button>
+                    <button class="booking-option" data-value="Boarding">
+                        <span class="option-icon">&#127968;</span>
+                        <span class="option-label">Boarding</span>
+                        <span class="option-price">SAR 120/night</span>
+                    </button>
+                </div>
+                <p class="error-msg" id="step1Error"></p>
+                <div class="booking-nav">
+                    <button class="btn btn-primary" id="toStep2">Next &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Select Pet Type -->
+            <div class="booking-step" id="step2">
+                <h4>Step 2: Select Pet Type</h4>
+                <div class="booking-options" id="petOptions">
+                    <button class="booking-option" data-value="Cat">
+                        <span class="option-icon">&#128049;</span>
+                        <span class="option-label">Cat</span>
+                    </button>
+                    <button class="booking-option" data-value="Small Dog">
+                        <span class="option-icon">&#128054;</span>
+                        <span class="option-label">Small Dog</span>
+                    </button>
+                    <button class="booking-option" data-value="Large Dog">
+                        <span class="option-icon">&#128021;</span>
+                        <span class="option-label">Large Dog</span>
+                    </button>
+                </div>
+                <p class="error-msg" id="step2Error"></p>
+                <div class="booking-nav">
+                    <button class="btn btn-secondary" id="backToStep1">&larr; Back</button>
+                    <button class="btn btn-primary" id="toStep3">Next &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Select Date & Time -->
+            <div class="booking-step" id="step3">
+                <h4>Step 3: Select Date &amp; Time</h4>
+                <div class="date-picker-container">
+                    <label for="bookingDate"><strong>Select Date:</strong></label>
+                    <input type="date" id="bookingDate" class="form-input">
+                </div>
+                <div class="time-slots-container" id="timeSlotsContainer" style="display:none;">
+                    <p><strong>Available Time Slots:</strong></p>
+                    <div class="time-slots" id="timeSlots">
+                        <!-- Time slots will be populated by JavaScript -->
+                    </div>
+                </div>
+                <p class="error-msg" id="step3Error"></p>
+                <div class="booking-nav">
+                    <button class="btn btn-secondary" id="backToStep2">&larr; Back</button>
+                    <button class="btn btn-primary" id="toStep4">Next &rarr;</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Payment Option -->
+            <div class="booking-step" id="step4">
+                <h4>Step 4: Payment Option</h4>
+                <p>Select your preferred payment method. <em>(This is a simulated UI &mdash; no real payment will be processed.)</em></p>
+                <div class="booking-options" id="paymentOptions">
+                    <button class="booking-option" data-value="Credit Card">
+                        <span class="option-icon">&#128179;</span>
+                        <span class="option-label">Credit Card</span>
+                    </button>
+                    <button class="booking-option" data-value="Apple Pay">
+                        <span class="option-icon">&#127822;</span>
+                        <span class="option-label">Apple Pay</span>
+                    </button>
+                    <button class="booking-option" data-value="Pay at Store">
+                        <span class="option-icon">&#128176;</span>
+                        <span class="option-label">Pay at Store</span>
+                    </button>
+                </div>
+                <p class="error-msg" id="step4Error"></p>
+                <div class="booking-nav">
+                    <button class="btn btn-secondary" id="backToStep3">&larr; Back</button>
+                    <button class="btn btn-primary" id="confirmBooking">Confirm Booking</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Confirmation -->
+            <div class="booking-step" id="step5">
+                <h4>Booking Confirmed!</h4>
+                <div class="booking-summary" id="bookingSummary">
+                    <!-- Summary will be populated by JavaScript -->
+                </div>
+                <div class="booking-nav">
+                    <button class="btn btn-primary" id="newBooking">Make Another Booking</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="booking-progress">
+            <div class="progress-step active" data-step="1">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="2">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="3">3</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="4">4</div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="5">5</div>
+        </div>
+    </div>
+
+    <!-- ==================== MINI SHOP ==================== -->
+    <div class="section shop-section" id="shop">
+        <h3>PawPerfect Shop</h3>
+        <p>Browse our curated selection of premium pet care products. Add items to your cart and checkout when ready.</p>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Product 1 -->
+            <div class="product-card" data-id="1" data-name="Oatmeal Pet Shampoo" data-price="45">
+                <div class="product-image">
+                    <img src="../images/pet-care-services.webp" alt="Oatmeal Pet Shampoo">
+                </div>
+                <h5>Oatmeal Pet Shampoo</h5>
+                <p>Gentle, moisturizing shampoo suitable for all coat types. Soothes dry and itchy skin.</p>
+                <p class="product-price">SAR 45.00</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card" data-id="2" data-name="Lavender Pet Perfume" data-price="35">
+                <div class="product-image">
+                    <img src="../images/pet-sitter.jpg" alt="Lavender Pet Perfume">
+                </div>
+                <h5>Lavender Pet Perfume</h5>
+                <p>Long-lasting, pet-safe fragrance with calming lavender scent. Keeps your pet smelling fresh.</p>
+                <p class="product-price">SAR 35.00</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" data-id="3" data-name="Classic Pet Bowtie" data-price="25">
+                <div class="product-image">
+                    <img src="../images/pet-accessories.jpg" alt="Classic Pet Bowtie">
+                </div>
+                <h5>Classic Pet Bowtie</h5>
+                <p>Adorable adjustable bowtie available in multiple colors. Perfect for special occasions.</p>
+                <p class="product-price">SAR 25.00</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card" data-id="4" data-name="Interactive Chew Toy" data-price="30">
+                <div class="product-image">
+                    <img src="../images/dog-cat-friends.jpg" alt="Interactive Chew Toy">
+                </div>
+                <h5>Interactive Chew Toy</h5>
+                <p>Durable, non-toxic chew toy that keeps pets entertained for hours. Great for dental health.</p>
+                <p class="product-price">SAR 30.00</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card" data-id="5" data-name="Coconut Conditioner" data-price="50">
+                <div class="product-image">
+                    <img src="../images/boarding-facility.jpg" alt="Coconut Conditioner">
+                </div>
+                <h5>Coconut Conditioner</h5>
+                <p>Deep conditioning treatment with natural coconut oil. Leaves coat silky smooth and shiny.</p>
+                <p class="product-price">SAR 50.00</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card" data-id="6" data-name="Plush Squeaky Toy" data-price="20">
+                <div class="product-image">
+                    <img src="../images/pets-happy.jpg" alt="Plush Squeaky Toy">
+                </div>
+                <h5>Plush Squeaky Toy</h5>
+                <p>Soft plush toy with built-in squeaker. Perfect for cuddling and gentle play sessions.</p>
+                <p class="product-price">SAR 20.00</p>
+                <button class="btn btn-primary add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart-section" id="cartSection">
+            <h4>Shopping Cart</h4>
+            <div class="cart-items" id="cartItems">
+                <p class="cart-empty">Your cart is empty. Add some products above!</p>
+            </div>
+            <div class="cart-total" id="cartTotal" style="display:none;">
+                <p><strong>Subtotal: SAR <span id="cartSubtotal">0.00</span></strong></p>
+                <button class="btn btn-primary" id="checkoutBtn">Checkout (Simulated)</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h6>PawPerfect</h6>
+                <p>Premium pet care services you can trust. Grooming, boarding, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h6>Contact</h6>
+                <address>
+                    123 Pet Avenue, Jeddah, SA<br>
+                    <a href="mailto:info@pawperfect.com">info@pawperfect.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PawPerfect Pet Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

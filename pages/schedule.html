@@ -1,0 +1,179 @@
+<!--
+    Name: [Your Name]
+    ID: [Your ID]
+    Section: [Your Section]
+    Date: [Date]
+    
+    File: pages/schedule.html
+    Description: Weekly schedule page for PawPerfect showing booking availability.
+    Features: Formatted table with colspan and rowspan, alternating row styles.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - PawPerfect Pet Care</title>
+    <link rel="stylesheet" href="../global/main.css">
+    <link rel="stylesheet" href="../global/print.css" media="print">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header>
+        <nav class="main-nav" id="mainNav">
+            <div class="nav-brand">
+                <h1 class="logo">PawPerfect</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="schedule.html" class="active">Schedule</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="services.html#shop" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <div class="page-header">
+        <h2>Weekly Schedule</h2>
+        <p>View our weekly availability for grooming, bath, nail trim, and boarding services. Plan your visit accordingly.</p>
+    </div>
+
+    <!-- ==================== SCHEDULE TABLE ==================== -->
+    <div class="section schedule-section" id="scheduleSection">
+        <h3>Booking Availability &mdash; Weekly Overview</h3>
+        <p>The table below shows available time slots for each service throughout the week. <u>Green cells</u> indicate available slots, while <strong>marked cells</strong> show limited or fully booked times.</p>
+
+        <div class="table-responsive">
+            <table class="schedule-table" id="scheduleTable">
+                <caption>PawPerfect Weekly Service Schedule</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Time Slot</th>
+                        <th colspan="3">Weekdays</th>
+                        <th colspan="2">Weekend</th>
+                    </tr>
+                    <tr>
+                        <th>Sat &ndash; Mon</th>
+                        <th>Tue &ndash; Wed</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Holiday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Morning Block -->
+                    <tr class="row-even">
+                        <td rowspan="2" class="time-cell"><strong>Morning</strong><br>8:00 &ndash; 12:00</td>
+                        <td class="available">Grooming<br><em>Available</em></td>
+                        <td class="available">Grooming<br><em>Available</em></td>
+                        <td class="limited">Grooming<br><em>Limited</em></td>
+                        <td class="closed" rowspan="2">Closed<br><em>Opens at 2 PM</em></td>
+                        <td class="closed" rowspan="6">Closed<br><em>All Day</em></td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td class="available">Bath &amp; Brush<br><em>Available</em></td>
+                        <td class="available">Bath &amp; Brush<br><em>Available</em></td>
+                        <td class="available">Bath &amp; Brush<br><em>Available</em></td>
+                    </tr>
+                    <!-- Midday Block -->
+                    <tr class="row-even">
+                        <td rowspan="2" class="time-cell"><strong>Midday</strong><br>12:00 &ndash; 3:00</td>
+                        <td class="available">Nail Trim<br><em>Available</em></td>
+                        <td class="limited">Nail Trim<br><em>Limited</em></td>
+                        <td class="available">Nail Trim<br><em>Available</em></td>
+                        <td class="closed" rowspan="2">Closed<br><em>Opens at 2 PM</em></td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td class="available">Grooming<br><em>Available</em></td>
+                        <td class="available">Grooming<br><em>Available</em></td>
+                        <td class="limited">Grooming<br><em>Limited</em></td>
+                    </tr>
+                    <!-- Afternoon Block -->
+                    <tr class="row-even">
+                        <td rowspan="2" class="time-cell"><strong>Afternoon</strong><br>3:00 &ndash; 6:00</td>
+                        <td class="available">All Services<br><em>Available</em></td>
+                        <td class="available">All Services<br><em>Available</em></td>
+                        <td class="available">All Services<br><em>Available</em></td>
+                        <td class="available">All Services<br><em>Available</em></td>
+                    </tr>
+                    <tr class="row-odd">
+                        <td colspan="2" class="available">Boarding Check-in<br><em>Available (Sat&ndash;Wed)</em></td>
+                        <td class="limited">Boarding Check-in<br><em>Limited</em></td>
+                        <td class="available">Boarding Check-in<br><em>Available</em></td>
+                    </tr>
+                    <!-- Evening Block -->
+                    <tr class="row-even">
+                        <td class="time-cell"><strong>Evening</strong><br>6:00 &ndash; 9:00</td>
+                        <td class="limited">Grooming<br><em>Limited</em></td>
+                        <td class="limited">Grooming<br><em>Limited</em></td>
+                        <td class="available">All Services<br><em>Available</em></td>
+                        <td class="available">All Services<br><em>Available</em></td>
+                        <td class="closed">Closed</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6" class="table-footer">
+                            <strong>Legend:</strong> 
+                            <span class="legend-available">Available</span> | 
+                            <span class="legend-limited">Limited Slots</span> | 
+                            <span class="legend-closed">Closed</span>
+                            &mdash; Schedule subject to change. Book online for guaranteed slots.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="schedule-notes">
+            <h4>Important Notes</h4>
+            <ul>
+                <li>Boarding check-in is available during afternoon hours. Check-out is available all day.</li>
+                <li>Friday services begin at <strong>2:00 PM</strong> after prayer time.</li>
+                <li>Holiday schedules may vary. Please call ahead to confirm availability.</li>
+                <li>Online bookings receive <strong>priority scheduling</strong> over walk-ins.</li>
+            </ul>
+            <div class="cta-center">
+                <a href="services.html#booking" class="btn btn-primary">Book Your Slot Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h6>PawPerfect</h6>
+                <p>Premium pet care services you can trust. Grooming, boarding, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h6>Contact</h6>
+                <address>
+                    123 Pet Avenue, Jeddah, SA<br>
+                    <a href="mailto:info@pawperfect.com">info@pawperfect.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PawPerfect Pet Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

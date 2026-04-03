@@ -1,0 +1,116 @@
+/* ============================================================
+   PawPerfect Pet Care - Print Stylesheet
+   Purpose: When printing, ONLY the schedule table is shown.
+   All other content (navigation, footer, images, etc.) is hidden.
+   ============================================================ */
+
+@media print {
+    /* Hide everything by default */
+    body * {
+        visibility: hidden;
+    }
+
+    /* Hide specific elements completely */
+    header,
+    footer,
+    .main-nav,
+    .page-header,
+    .hero-section,
+    .about-section,
+    .services-preview,
+    .info-section,
+    .testimonials-section,
+    .cta-section,
+    .booking-section,
+    .shop-section,
+    .cart-section,
+    .video-section,
+    .feedback-section,
+    .schedule-notes,
+    .nav-toggle,
+    img,
+    .btn,
+    .hero-buttons {
+        display: none !important;
+    }
+
+    /* Show only the schedule table and its contents */
+    .schedule-section,
+    .schedule-section *,
+    .table-responsive,
+    .table-responsive *,
+    .schedule-table,
+    .schedule-table * {
+        visibility: visible;
+    }
+
+    .schedule-section {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .schedule-section h3 {
+        visibility: visible;
+        text-align: center;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #333;
+    }
+
+    /* Table print styles */
+    .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10pt;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        border: 1px solid #333;
+        padding: 6px 8px;
+        text-align: center;
+    }
+
+    .schedule-table thead {
+        background-color: #ddd !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .schedule-table .available {
+        background-color: #e8f5e9 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .schedule-table .limited {
+        background-color: #fff3e0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .schedule-table .closed {
+        background-color: #ffebee !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Remove shadows and backgrounds for clean print */
+    .table-responsive {
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    body {
+        background-color: #fff;
+    }
+
+    /* Page setup */
+    @page {
+        margin: 1cm;
+        size: landscape;
+    }
+}

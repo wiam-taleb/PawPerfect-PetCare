@@ -1,0 +1,197 @@
+<!--
+    Name: [Your Name]
+    ID: [Your ID]
+    Section: [Your Section]
+    Date: [Date]
+    
+    File: pages/feedback.html
+    Description: Feedback form page for PawPerfect.
+    Features: Structured feedback form with text fields, radio buttons, checkboxes,
+              dropdown menu, textarea, and JavaScript validation.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - PawPerfect Pet Care</title>
+    <link rel="stylesheet" href="../global/main.css">
+    <link rel="stylesheet" href="../global/print.css" media="print">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header>
+        <nav class="main-nav" id="mainNav">
+            <div class="nav-brand">
+                <h1 class="logo">PawPerfect</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+                <li><a href="services.html#shop" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== PAGE HEADER ==================== -->
+    <div class="page-header">
+        <h2>Send Us Your Feedback</h2>
+        <p>We value your opinion. Let us know about your experience at PawPerfect so we can continue to improve our services.</p>
+    </div>
+
+    <!-- ==================== FEEDBACK FORM ==================== -->
+    <div class="section feedback-section" id="feedbackSection">
+        <h3>Feedback Form</h3>
+        <p>Please fill out the form below. Fields marked with <span class="required-mark">*</span> are required.</p>
+
+        <form class="feedback-form" id="feedbackForm" novalidate>
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="feedbackName">Full Name <span class="required-mark">*</span></label>
+                <input type="text" id="feedbackName" name="name" class="form-input" placeholder="Enter your full name" required>
+                <p class="error-msg" id="nameError"></p>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="feedbackEmail">Email Address <span class="required-mark">*</span></label>
+                <input type="email" id="feedbackEmail" name="email" class="form-input" placeholder="Enter your email address" required>
+                <p class="error-msg" id="emailError"></p>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="form-group">
+                <label for="feedbackPhone">Phone Number</label>
+                <input type="tel" id="feedbackPhone" name="phone" class="form-input" placeholder="e.g., +966 50 000 0000">
+            </div>
+
+            <!-- Rating - Radio Buttons -->
+            <div class="form-group">
+                <label>Overall Rating <span class="required-mark">*</span></label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="rating" value="Excellent"> Excellent
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="rating" value="Good"> Good
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="rating" value="Average"> Average
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="rating" value="Poor"> Poor
+                    </label>
+                </div>
+                <p class="error-msg" id="ratingError"></p>
+            </div>
+
+            <!-- Services Used - Checkboxes -->
+            <div class="form-group">
+                <label>Services Used (select all that apply)</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="services" value="Grooming"> Grooming
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="services" value="Bath"> Bath &amp; Brush
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="services" value="Nail Trim"> Nail Trim
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="services" value="Boarding"> Boarding
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="services" value="Shop"> Pet Shop
+                    </label>
+                </div>
+            </div>
+
+            <!-- How did you hear about us - Dropdown -->
+            <div class="form-group">
+                <label for="feedbackSource">How did you hear about us?</label>
+                <select id="feedbackSource" name="source" class="form-input">
+                    <option value="">-- Select an option --</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Friend/Family">Friend or Family Referral</option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Walk-in">Walk-in / Passing By</option>
+                    <option value="Advertisement">Advertisement</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Pet Type Preference - Dropdown -->
+            <div class="form-group">
+                <label for="petPreference">Your Pet Type</label>
+                <select id="petPreference" name="petType" class="form-input">
+                    <option value="">-- Select pet type --</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Small Dog">Small Dog</option>
+                    <option value="Large Dog">Large Dog</option>
+                    <option value="Multiple Pets">Multiple Pets</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Comments - Textarea -->
+            <div class="form-group">
+                <label for="feedbackComments">Additional Comments</label>
+                <textarea id="feedbackComments" name="comments" class="form-input" rows="5" placeholder="Share your experience, suggestions, or any additional feedback..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-large">Send Feedback</button>
+            </div>
+        </form>
+
+        <!-- Success Message (hidden by default) -->
+        <div class="success-message" id="feedbackSuccess" style="display:none;">
+            <div class="success-card">
+                <h4>Thank You for Your Feedback!</h4>
+                <p>Your feedback has been received successfully. We appreciate you taking the time to share your experience with us.</p>
+                <p>Our team reviews all feedback to continuously improve our services.</p>
+                <button class="btn btn-primary" id="newFeedback">Submit Another Response</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h6>PawPerfect</h6>
+                <p>Premium pet care services you can trust. Grooming, boarding, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h6>Contact</h6>
+                <address>
+                    123 Pet Avenue, Jeddah, SA<br>
+                    <a href="mailto:info@pawperfect.com">info@pawperfect.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PawPerfect Pet Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

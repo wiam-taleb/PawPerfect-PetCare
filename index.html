@@ -1,0 +1,195 @@
+<!--
+    Name: [Your Name]
+    ID: [Your ID]
+    Section: [Your Section]
+    Date: [Date]
+    
+    File: index.html
+    Description: Home page for PawPerfect Pet Care website.
+    Features: Introduction, service highlights, CTA buttons, shop preview.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPerfect - Premium Pet Care &amp; Grooming</title>
+    <link rel="stylesheet" href="global/main.css">
+    <link rel="stylesheet" href="global/print.css" media="print">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header>
+        <nav class="main-nav" id="mainNav">
+            <div class="nav-brand">
+                <h1 class="logo">PawPerfect</h1>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/schedule.html">Schedule</a></li>
+                <li><a href="pages/video.html">Video</a></li>
+                <li><a href="pages/feedback.html">Feedback</a></li>
+                <li><a href="pages/services.html#shop" class="cart-link">Cart (<span id="cartCount">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <div class="hero-section" id="heroSection">
+        <div class="hero-content">
+            <h2>Your Pet Deserves the <em>Best</em> Care</h2>
+            <p>Professional grooming, comfortable boarding, and premium pet products &mdash; all in one place. At <strong>PawPerfect</strong>, we treat every pet like family.</p>
+            <div class="hero-buttons">
+                <a href="pages/services.html#booking" class="btn btn-primary">Book Now</a>
+                <a href="pages/services.html#shop" class="btn btn-secondary">View Shop</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-grooming.jpg" alt="Professional pet grooming service">
+        </div>
+    </div>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <div class="section about-section" id="aboutSection">
+        <h3>Why Choose PawPerfect?</h3>
+        <blockquote>
+            <p>&ldquo;We believe every pet deserves to look and feel their absolute best. Our team of certified groomers and pet care specialists are dedicated to providing top-quality services in a safe, loving environment.&rdquo;</p>
+            <cite>&mdash; PawPerfect Team</cite>
+        </blockquote>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>Expert Grooming</h4>
+                <p>Full grooming services including baths, haircuts, nail trims, and ear cleaning by certified professionals.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Comfortable Boarding</h4>
+                <p>Spacious, climate-controlled boarding facilities with 24/7 supervision and daily exercise routines.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Premium Products</h4>
+                <p>Curated selection of shampoos, perfumes, bowties, and toys for your beloved companion.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SERVICES PREVIEW ==================== -->
+    <div class="section services-preview" id="servicesPreview">
+        <h3>Our Services</h3>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/hero-grooming.jpg" alt="Pet grooming service">
+                <h5>Grooming</h5>
+                <p>Complete grooming packages tailored to your pet's breed and needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/pet-boarding.jpg" alt="Pet boarding facility">
+                <h5>Boarding</h5>
+                <p>Safe and comfortable overnight stays with personalized attention.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/pet-accessories.jpg" alt="Pet shop products">
+                <h5>Pet Shop</h5>
+                <p>Browse our collection of premium pet care products and accessories.</p>
+            </div>
+        </div>
+        <div class="cta-center">
+            <a href="pages/services.html" class="btn btn-primary">Explore All Services</a>
+        </div>
+    </div>
+
+    <!-- ==================== QUICK INFO SECTION ==================== -->
+    <div class="section info-section" id="infoSection">
+        <h3>Visit Us</h3>
+        <div class="info-grid">
+            <div class="info-card">
+                <h6>Our Location</h6>
+                <address>
+                    PawPerfect Pet Care Center<br>
+                    123 Pet Avenue, Suite 100<br>
+                    Jeddah, Saudi Arabia 21589<br>
+                    Phone: <a href="tel:+966500000000">+966 50 000 0000</a><br>
+                    Email: <a href="mailto:info@pawperfect.com">info@pawperfect.com</a>
+                </address>
+            </div>
+            <div class="info-card">
+                <h6>Working Hours</h6>
+                <ul>
+                    <li>Saturday &ndash; Thursday: 8:00 AM &ndash; 9:00 PM</li>
+                    <li>Friday: 2:00 PM &ndash; 9:00 PM</li>
+                </ul>
+                <p>Walk-ins welcome. <strong>Appointments recommended</strong> for grooming services.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <div class="section testimonials-section" id="testimonialsSection">
+        <h3>What Our Clients Say</h3>
+        <ol class="testimonials-list">
+            <li>
+                <blockquote>
+                    <p>&ldquo;PawPerfect transformed my dog's coat! The grooming team is incredibly skilled and gentle.&rdquo;</p>
+                    <cite>&mdash; Sarah A.</cite>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote>
+                    <p>&ldquo;I trust PawPerfect with boarding my cats whenever I travel. They always come home happy!&rdquo;</p>
+                    <cite>&mdash; Mohammed K.</cite>
+                </blockquote>
+            </li>
+            <li>
+                <blockquote>
+                    <p>&ldquo;The online booking system is so convenient. I love being able to pick my time slot easily.&rdquo;</p>
+                    <cite>&mdash; Layla R.</cite>
+                </blockquote>
+            </li>
+        </ol>
+    </div>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <div class="section cta-section" id="ctaSection">
+        <h3>Ready to Pamper Your Pet?</h3>
+        <p>Book a grooming session or browse our shop today. Your pet will thank you!</p>
+        <div class="hero-buttons">
+            <a href="pages/services.html#booking" class="btn btn-primary">Book Now</a>
+            <a href="pages/feedback.html" class="btn btn-secondary">Send Feedback</a>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h6>PawPerfect</h6>
+                <p>Premium pet care services you can trust. Grooming, boarding, and more.</p>
+            </div>
+            <div class="footer-section">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/services.html">Services</a></li>
+                    <li><a href="pages/schedule.html">Schedule</a></li>
+                    <li><a href="pages/feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h6>Contact</h6>
+                <address>
+                    123 Pet Avenue, Jeddah, SA<br>
+                    <a href="mailto:info@pawperfect.com">info@pawperfect.com</a>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PawPerfect Pet Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
